@@ -1,3 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #e9f2f9;
+}
 .App {
   text-align: left;
 }
@@ -8,16 +16,23 @@
 }
 
 .App-header {
-  background-color: #222;
-  height: 50px;
-  padding: 20px;
-  color: white;
+  background-color: #f26c4f;
+  height: 110px;
+  padding: 10px 30px;
+  color: #1b325f;
   text-align: left;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1em;
+  font-size: 1.5rem;
   font-weight: bold;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: baseline;
 }
-
+.App-header img {
+  width: 90px;
+  margin-right: 0.5rem;
+}
 .App-title {
   font-size: 1.5em;
 }
@@ -25,6 +40,38 @@
 .App-content {
   padding-top: 20px;
   font-size: large;
+}
+.cardSection {
+  display: flex;
+  justify-content: center;
+}
+.cardInfo {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardInfo-img {
+  height: 200px;
+  object-fit: cover;
+}
+.cardInfo:hover .cardInfo-img {
+  filter: blur(2px);
+}
+.cardInfo:hover .cardInfo-btn {
+  /* filter: blur(2px); */
+  display: block;
+}
+.cardInfo-container {
+  position: relative;
+}
+.cardInfo-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
 }
 
 @keyframes App-logo-spin {
@@ -50,8 +97,26 @@ tr {
 .footer {
   padding-top: 20px;
   text-align: center;
+  color: #1b325f;
+  background-color: #f26c4f;
+  padding: 0.5rem;
+  margin-top: 4rem;
 }
 
-.card {
+.footer li {
+  list-style-type: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.cardInfo {
   width: 18rem;
 }
+
+/* [
+  "#1b325f",
+  "#9cc4e4",
+  "#e9f2f9",
+  "#3a89c9",
+  "#f26c4f"
+] */
